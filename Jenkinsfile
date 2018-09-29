@@ -25,6 +25,7 @@ pipeline {
         stage('Deliver') { 
             steps {
                 sh './jenkins/scripts/deliver.sh' 
+                build job: 'hello', wait: false
             }
         }
     }
